@@ -1,2 +1,1 @@
-A simple <a href="https://pratap-prasoon.github.io/calculator.github.io/calculator.html">calculator</a> using HTML, CSS & functionality achieved using Javascript. The logic is very simple with the minimum lines of code possible
- 
+A simple <a href="https://pratap-prasoon.github.io/calculator.github.io/calculator.html">calculator</a> using HTML, CSS & functionality achieved using Javascript.
