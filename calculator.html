@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style type="text/css">
+
+        body{
+            margin: auto;
+            margin-top: 13%;
+            margin-left: 40%;
+            background-image: url("https://miro.medium.com/max/3840/1*VicCQXJwdsGg4Woj-JM5Sg.jpeg");
+        }
+
+    .title{
+        text-align: center;
+        width: 250px;
+        /* border: solid black 3px; */
+        color:khaki;
+        height: 25px;
+    }
+
+    input[type="button"]{
+        border: solid orange 3px;
+        width: 55px;
+        height: 35px;
+    }
+
+    input[type="text"] {
+        background-color: white;
+        width: 240px;
+        border: solid skyblue 3px;
+        height: 35px;
+
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="title" >CALCULATOR</div>
+        <table border="4">
+            <tr>
+                <td colspan="20"><input type="text" id="answer"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="AC" onclick="clr()"/></td>
+                <td><input type="button" value="+/-" onclick="chng('+')"/></td>
+                <td><input type="button" value="%" onclick="prcnt('%')"/></td>
+                <td><input type="button" value="C" onclick="clr()"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="7" onclick="cal('7')"/></td>
+                <td><input type="button" value="8" onclick="cal('8')"/></td>
+                <td><input type="button" value="9" onclick="cal('9')"/></td>
+                <td><input type="button" value="x" onclick="cal('*')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="cal('4')"/></td>
+                <td><input type="button" value="5" onclick="cal('5')"/></td>
+                <td><input type="button" value="6" onclick="cal('6')"/></td>
+                <td><input type="button" value="+" onclick="cal('+')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="1" onclick="cal('1')"/></td>
+                <td><input type="button" value="2" onclick="cal('2')"/></td>
+                <td><input type="button" value="3" onclick="cal('3')"/></td>
+                <td><input type="button" value="-" onclick="cal('-')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="." onclick="cal('.')"></td>
+                <td><input type="button" value="0" onclick="cal('0')"></td>
+                <td><input type="button" value="=" onclick="solve()"></td>
+                <td><input type="button" value="/" onclick="cal('/')"></td>
+            </tr>
+
+
+        </table>
+
+        <script type="text/javascript">
+
+            function cal(val){
+                document.getElementById("answer").value += val
+            }
+
+            function solve(){
+                let x = document.getElementById("answer").value
+                let y = eval(x)
+                document.getElementById("answer").value = y
+            }
+
+            function clr(){
+                document.getElementById("answer").value =""
+            }
+
+            function chng(){
+                let x = document.getElementById("answer").value
+                let y = -(x)
+                document.getElementById("answer").value = y;
+            }
+
+            function prcnt(){
+                let x = document.getElementById("answer").value
+                let y = (x/100)
+                document.getElementById("answer").value = y
+            }
+
+
+        </script>
+</body>
+</html>
